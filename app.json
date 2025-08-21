@@ -1,141 +1,100 @@
 {
-  "name": "B.M.B-TECH",
-  "description": "ʙᴇsᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ ʙᴍʙ ᴛᴇᴄʜ 🇹🇿",
-  "keywords": ["bot", "node", "baileys", "whatsapp"],
-  "logo": "https://files.catbox.moe/uol78i.jpg",
-  "repository": "https://github.com/ekitale/maths-project",
-  "succes_url": "/",
-  "stack": "heroku-24",
+  "name": "Skipper-Bot",
+  "description": "WhatsApp Bot powered by Baileys and deployed on Railway",
+  "stack": "nodejs-18",
   "env": {
-    "PREFIX": {
-      "description": "choose your prefix of bot",
-      "value": ".",
-      "required": true
-    },
-    "AUTO_READ_STATUS": {
-      "description": "Your contact status will be read automatically(type yes to active or no to deactive ; don't write in capital letter)",
-      "value": "yes",
-      "required": false
-    },
-    "AUTO_DOWNLOAD_STATUS": {
-      "description": "Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
-      "value": "no",
-      "required": false
-    },
-    "AUTO_READ": {
-      "description": "Your contact will be read messages automatically(type yes to active or no to deactive ; don't write in capital letter)",
-      "value": "no",
-      "required": false
-    },
-    "AUTO_REACT": {
-      "description": "Enter yes for your bot to auto react",
-      "value": "no",
-      "required": false
-    },
-    "ANTICALL": {
-      "description": "Enter yes for your bot to auto reject calls",
-      "value": "no",
-      "required": false
-    },
-    "AUTO_REACT_STATUS": {
-      "description": "Enter yes for your bot to auto like status",
-      "value": "yes",
-      "required": true
-    },
-    "PM_PERMIT": {
-      "description": "Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
-      "value": "no",
-      "required": false
-    },
-    "BOT_NAME": {
-      "description": "put A name for your bot",
-      "value": "B.M.B-TECH",
-      "required": false
-    },
-    "BOT_MENU_LINKS": {
-      "description": "add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value": "https://files.catbox.moe/uol78i.jpg",
-      "required": false
-    },
-    "PUBLIC_MODE": {
-      "description": "type yes to put your bot on public mode or no to put it on private mod",
-      "value": "yes",
-      "required": false
-    },
-    "HEROKU_API_KEY": {
-      "description": "insert your heroku api-key (this is optionnal)",
-      "value": "HRKU-6930f8d0-3dde-4024-8bc5-ea03012e0fc1",
-      "required": false
-    },
-    "HEROKU_APP_NAME": {
-      "description": "insert your heroku APP NAME (put the name you put on top)",
-      "required": false
-    },
     "SESSION_ID": {
-      "description": "put your session ID , the code you receive after scanning Qr code",
-      "value": "",
+      "description": "Your WhatsApp Session ID (must be generated first)",
       "required": true
     },
     "OWNER_NAME": {
-      "desc": "Your Name",
-      "required": false,
-      "value": "𝙱.𝙼.𝙱-𝚇𝙼𝙳"
+      "description": "Bot Owner's Name",
+      "required": true,
+      "value": "PUZZLAR_SKIPPER"
     },
     "NUMERO_OWNER": {
-      "desc": "Your number , dont put '+' and put you area code(exemple of kenya '254')",
+      "description": "Bot Owner's Number",
       "required": true,
-      "value": "255767862457"
+      "value": "254718850915"
     },
-    "WARN_COUNT": {
-      "desc": "this is the limit of warn for warning commandes",
-      "required": false,
-      "value": "3"
+    "PREFIX": {
+      "description": "Command prefix",
+      "value": "."
     },
-    "STARTING_BOT_MESSAGE": {
-      "description": "if you don't want startting-bot-message put no else put yes",
-      "required": true,
-      "value": "yes"
+    "BOT_NAME": {
+      "description": "Name of the bot",
+      "value": "SKIPPER"
     },
-    "PRESENCE": {
-      "description": "Mark your presence: 1 online. 2 typing a message. 3 recording . Or leave the field blank to indicate your real state.",
-      "value": "2",
-      "required": false
-    },
-    "ANTI_DELETE_MESSAGE": {
-      "description": "if you want to enable anti delete message put yes else put no",
-      "value": "no",
-      "required": true
+    "IMAGE_MENU": {
+      "description": "Menu image URL",
+      "value": "https://files.catbox.moe/8qq3l4.jpg"
     },
     "CHAT_BOT": {
-      "description": "Turn on the chatbot reply system (yes = active, no = deactive)",
-      "value": "no",
-      "required": false
-    },
-    "AUDIO_CHAT_BOT": {
-      "description": "Enable audio response in chatbot (yes = active, no = deactive)",
-      "value": "no",
-      "required": false
+      "description": "Enable chatbot (yes/no)",
+      "value": "yes"
     },
     "AUTO_BIO": {
-      "description": "Enable automatic bio update (yes = active, no = deactive)",
-      "value": "yes",
-      "required": false
+      "description": "Enable auto bio (yes/no)",
+      "value": "yes"
+    },
+    "PUBLIC_MODE": {
+      "description": "Bot public mode (yes/no)",
+      "value": "yes"
     },
     "AUDIO_REPLY": {
-      "description": "Enable automatic audio replies (yes = active, no = deactive)",
-      "value": "no",
+      "description": "Enable audio replies (yes/no)",
+      "value": "yes"
+    },
+    "AUTO_READ_STATUS": {
+      "description": "Enable auto read of statuses (yes/no)",
+      "value": "yes"
+    },
+    "AUTO_DOWNLOAD_STATUS": {
+      "description": "Enable auto download of statuses (yes/no)",
+      "value": "no"
+    },
+    "STARTING_BOT_MESSAGE": {
+      "description": "Send starting bot message (yes/no)",
+      "value": "yes"
+    },
+    "ANTI_DELETE_MESSAGE": {
+      "description": "Enable anti-delete message (yes/no)",
+      "value": "yes"
+    },
+    "PM_PERMIT": {
+      "description": "Enable PM permit (yes/no)",
+      "value": "yes"
+    },
+    "ANTICALL": {
+      "description": "Block calls (yes/no)",
+      "value": "yes"
+    },
+    "AUTO_REACT": {
+      "description": "Enable auto reaction (yes/no)",
+      "value": "no"
+    },
+    "AUTO_REACT_STATUS": {
+      "description": "Enable auto reaction to statuses (yes/no)",
+      "value": "no"
+    },
+    "AUTO_READ": {
+      "description": "Enable auto reading messages (yes/no)",
+      "value": "yes"
+    },
+    "WARN_COUNT": {
+      "description": "Warn count before action",
+      "value": "3"
+    },
+    "OPENAI_API_KEY": {
+      "description": "Optional: OpenAI API key for AI features",
+      "required": false
+    },
+    "DATABASE_URL": {
+      "description": "Railway auto injects this for PostgreSQL",
       "required": false
     }
   },
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    }
-  ]
+  "scripts": {
+    "start": "node index.js"
+  }
 }
